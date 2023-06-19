@@ -1,13 +1,23 @@
+'use client';
 import React from 'react';
+import { createRoot } from 'react-dom/client';
+import {Canvas} from '@react-three/fiber';
 
-export default function Home() {
+export default function App() {
   // do something here
   return (
     <main>
       <div>
-        <p style={{color: 'white'}}> ba dee bo dee dee bo bo</p>
-        <p>do do do deee do da da </p>
+        <Canvas> 
+          <mesh>
+            <ambientLight intensity={0.9} />
+            <directionalLight color="red" position={[3, 0, 5]} />
+            <boxGeometry />
+            <meshStandardMaterial />
+          </mesh>
+        </Canvas>
       </div>
     </main>
   )
 }
+
