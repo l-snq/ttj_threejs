@@ -18,9 +18,6 @@ export default function Home() {
 
   return (
     <main>
-      <div>
-        Hi there
-      </div>
       <Canvas>
         <Suspense fallback={null}>
           <Load />
