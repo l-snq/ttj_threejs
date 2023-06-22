@@ -10,7 +10,7 @@ function Load() {
     const interval = setInterval(toggle, 1000)
     return () => clearInterval(interval)
   }, [])
-  const { scene } = useLoader(GLTFLoader, flag ? './character.gltf' : './character.gltf') 
+  const { scene } = useLoader(GLTFLoader, flag ? './character.glb' : './character.glb') 
   return <primitive object={scene} />
 }
 
