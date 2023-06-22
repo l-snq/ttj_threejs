@@ -1,10 +1,16 @@
 'use client';
 import React from 'react';
-import { createRoot } from 'react-dom/client';
 import {Canvas} from '@react-three/fiber';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 export default function App() {
   // do something here
+  const loader = new GLTFLoader();
+
+  loader.load('models/character.gltf', function (gltf) { // FIX
+    scene.add( gltf.scene ); // FIX
+  })
+
   return (
     <main>
       <div>
