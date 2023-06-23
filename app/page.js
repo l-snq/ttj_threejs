@@ -28,13 +28,6 @@ export default function Home() {
 
   return (
     <main>
-      <Canvas style={{height: '100vh'}}>
-        <pointLight position={[10, 10, 10]} />
-        <Suspense fallback={null}>
-          <Load />
-        </Suspense>
-        <ambientLight />
-      </Canvas>
       <Search 
         placeholder='cd about'
         allowClear
@@ -44,6 +37,13 @@ export default function Home() {
           width: 304,
         }}
       />
+      <Canvas style={{height: '100vh'}}>
+        <pointLight position={[10, 10, 10]} />
+        <Suspense fallback={null}>
+          <Load />
+        </Suspense>
+        <ambientLight />
+      </Canvas>
     </main>
   )
 }
