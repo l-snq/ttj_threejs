@@ -2,6 +2,7 @@
 import React, { Suspense, useEffect, useRef, useReducer } from 'react'
 import { Canvas, useLoader, useFrame } from '@react-three/fiber'
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { Input, Space } from 'antd';
 
 function Load() {
   const [flag, toggle] = useReducer((state) => !state, true)
@@ -19,6 +20,12 @@ function Load() {
 
 export default function Home() {
 
+  const { Search } = Input;
+
+  const onSearch = (value) => {
+    console.log(value);
+  }
+
   return (
     <main>
       <Canvas style={{height: '100vh'}}>
@@ -28,6 +35,15 @@ export default function Home() {
         </Suspense>
         <ambientLight />
       </Canvas>
+      <Search 
+        placeholder='cd about'
+        allowClear
+        onSearch={onSearch}
+        style={{
+          borderBottom: '3px solid red',
+          width: 304,
+        }}
+      />
     </main>
   )
 }
