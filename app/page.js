@@ -13,12 +13,12 @@ export default function Home() {
       display: 'flex',
       flexDirection: 'column',
     }}>
-      <CustomSearch />
       <Canvas style={{height: '100vh'}}>
         <pointLight position={[10, 10, 10]} />
         <Suspense fallback={<SpinnerWrapper />}>
           <LoadModel />
         </Suspense>
+        <CustomSearch />
         <ambientLight />
       </Canvas>
     </main>
