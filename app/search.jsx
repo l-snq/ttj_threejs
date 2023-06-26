@@ -10,23 +10,19 @@ export default function CustomSearch() {
 
 	const handleSearch = (value) => {
 
-		if (value === 'cd about') {
-			// link to about page
-			console.log('about page')
-			router.push('/about');
-		} else if (value === 'cd my_work') {
-			console.log('my_work')
-			router.push('/mywork');
-		} else if (value === 'cd contact'){
-			console.log('contact me')
-			router.push('/contact');
-		} else if (value === 'help'){
-			console.log('help is on the way')
+		switch(value) {
+			case 'cd about': 
+				router.push('/about');
+				break;
+			case 'cd my_work':
+				router.push('mywork');
+				break;
+			case 'cd contact':
+				router.push('contact');
+				break;
+			default: 
+				alert("Invalid command", value);
 		}
-		else {
-			console.log(`invalid command: '${value}'`)
-		};
-
 	}
 
 	return(
