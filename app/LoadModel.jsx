@@ -17,7 +17,6 @@ export default function LoadModel () {
 
 	  useFrame((state, delta) => (ref.current.rotation.y += delta))
 
-	//try {
 	  const { scene } = useLoader(GLTFLoader, flag ? './character.glb' : './character.glb') 
 	return <primitive ref={ref} object={scene}>
     </primitive>
