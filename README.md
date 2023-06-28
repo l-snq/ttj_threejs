@@ -21,4 +21,4 @@ Contact me
 4. Add in search box to act like terminal input
     - Use ANTD for the template, but then dress up the search bar to look more like a terminal
     - Make it so that certain commands do certain things. E.g. `cd about` would bring you to the about section. ( Completed! )
-    - Make a prompt that will give you hints about what commands you can run
+    - Make a prompt that will give you hints about what commands you can run(completed!)
