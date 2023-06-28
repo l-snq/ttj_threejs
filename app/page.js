@@ -17,10 +17,10 @@ export default function Home() {
       <Canvas style={{height: '100vh'}}>
         <pointLight position={[10, 10, 10]} />
         <Suspense fallback={<SpinnerWrapper />}>
-          <LoadModel />
-        </Suspense>
-        <CustomSearch />
-        <CustomTooltip />
+            <LoadModel />
+          </Suspense>
+          <CustomSearch />
+          <CustomTooltip />
        <ambientLight />
       </Canvas>
     </main>

@@ -5,7 +5,7 @@ import { Html } from '@react-three/drei'
 export const CustomTooltip = () => {
   return (
     <Html center>
-      <div style={{display: 'flex', marginTop: '20em'}}>
+      <div style={{display: 'flex', marginTop: '20em', gap: '30px' }}>
 	<Tooltip title="Type 'cd about' to see who I am, what I have worked on, and what I enjoy!">
 	    <span> Go to my About Me page.</span>
 	</Tooltip>
@@ -15,7 +15,7 @@ export const CustomTooltip = () => {
 	<Tooltip title="Type 'cd contact' to get a hold of me!">
 	    <span> Go to my Contact Me page.</span>
 	</Tooltip>
-     </div>
-       </Html>
+       </div>
+     </Html>
   )
 }
