@@ -36,7 +36,7 @@ export default function CustomSearch() {
 				}}
 			>
 			      <Search 
-				placeholder='type "help" to get commands'
+				placeholder='View the tooltip below to get a list of commands.'
 				allowClear
 				onSearch={handleSearch}
 				style={{
