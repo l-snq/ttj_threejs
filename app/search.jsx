@@ -26,7 +26,7 @@ export default function CustomSearch() {
 	}
 
 	return(
-		<Html center>
+		<Html center style={{marginTop: '2em'}}>
 			<ConfigProvider
 				theme={{
 					algorithm: theme.darkAlgorithm,
