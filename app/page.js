@@ -1,10 +1,10 @@
 'use client'
 import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
-import CustomSearch from './search'
+import CustomSearch from './components/search'
 import LoadModel from './LoadModel' 
 import { SpinnerWrapper } from './components/Spinner'
-import { CustomTooltip} from './components/tooltip'
+import { CustomTooltip } from './components/tooltip'
 
 export default function Home() {
 

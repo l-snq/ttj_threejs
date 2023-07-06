@@ -20,6 +20,9 @@ export default function CustomSearch() {
 			case 'cd contact':
 				router.push('contact');
 				break;
+			case 'help':
+				<p>Hi!!</p>;
+				break;
 			default: 
 				alert("Invalid command", value);
 		}
