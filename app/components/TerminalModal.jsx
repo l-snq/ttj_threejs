@@ -1,33 +1,19 @@
 import React, {useState, useEffect} from 'react';
 import { Button, Modal} from 'antd';
 import {CustomSearch} from './search';
+import 'node_modules/xterm/css/xterm.css';
+import { Terminal } from 'xterm';
 
-export const TerminalModal = () => {
-    const [isModalOpen, setIsModalOpen] = useState();
+export default function TerminalModal() {
 
-    const showModal = () => {
-      setIsModalOpen(true);
-    }
-
-    const handleOk = () => {
-      setIsModalOpen(false);
-    }
-
-    const handleCancel = () => {
-      setIsModalOpen(false);
-    }
+	var term = new Terminal();
+	term.open(document.getElementById('terminal'));
+	term.write('Hello from \x1B[1;3;31mxterm.js\x1B[0m $ ')
 
     return( 
       <>
-	<Button type="primary" onClick={showModal} style={{display: 'flex', width: "40px"}}>^</Button>	
-	<Modal 
-	  title="console"
-	  open={isModalOpen}
-	  onOk={handleOk}
-	  onCancel={handleCancel}
-	>
-	<CustomSearch />
-      </Modal>
+	<div id="terminal">
+	</div>
       </>
     )
 }
