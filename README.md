@@ -22,3 +22,4 @@ Contact me
     - Use ANTD for the template, but then dress up the search bar to look more like a terminal
     - Make it so that certain commands do certain things. E.g. `cd about` would bring you to the about section. ( Completed! )
     - Make a prompt that will give you hints about what commands you can run(completed!)
+5. An idea i had was that I would use xtermjs to emulate an actual terminal instead of me making one myself, HOWEVER it doesn't play well with react and if I were to try xterm-for-react, i'll need to look into the source code more to make sure it works well. Right now it doesn't work correctly.
