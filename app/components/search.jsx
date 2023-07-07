@@ -1,10 +1,9 @@
-'use client'
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import { useRouter } from 'next/navigation';
-import { Alert, Input, Space, ConfigProvider, theme} from 'antd';
+import { Input, ConfigProvider, theme} from 'antd';
 import { Html } from '@react-three/drei';
 
-export default function CustomSearch() {
+export const CustomSearch = () => {
 	const { Search } = Input;
 	const router = useRouter();
 
@@ -29,7 +28,6 @@ export default function CustomSearch() {
 	}
 
 	return(
-		<Html center style={{marginTop: '2em'}}>
 			<ConfigProvider
 				theme={{
 					algorithm: theme.darkAlgorithm,
@@ -47,6 +45,5 @@ export default function CustomSearch() {
 				}}
 			      />
 			</ConfigProvider>
-		</Html>
 	)
 }

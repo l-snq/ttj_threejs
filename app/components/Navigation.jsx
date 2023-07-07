@@ -1,16 +1,23 @@
 import React from 'react';
+import {
+  AppstoreOutlined,
+  ContainerOutlined,
+  MenuFoldOutlined,
+  PieChartOutlined,
+} from '@ant-design/icons';
+import {Button, menu} from 'antd'
 
 export const Navigation = () => {
     return (
       <>
-      <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'row'}}>
- 	<ul style={{listStyleType: 'none'}}>
-	  <li>Home</li>
-	  <li>About</li>
-	  <li>Contact Me</li>
-	  <li>My Work</li>
-	</ul>
-     </div>
+	<div style={{display: 'flex', justifycontent: 'center', flexdirection: 'row'}}>
+	  <ul style={{liststyletype: 'none'}}>
+	    <li>home</li>
+	    <li>about</li>
+	    <li>contact me</li>
+	    <li>my work</li>
+	  </ul>
+	</div>
       </>
     )
 }

@@ -1,6 +1,5 @@
 import React from 'react'
 import { Tooltip } from 'antd'
-import CustomSearch from './search'
 import { Html } from '@react-three/drei'
 
 export const CustomTooltip = () => {
