@@ -5,6 +5,7 @@ import 'node_modules/xterm/css/xterm.css';
 import { Terminal } from 'xterm';
 
 export default function TerminalModal() {
+  // TODO! this is still broken. We need to fix this!!
 
 	var term = new Terminal();
 	term.open(document.getElementById('terminal'));

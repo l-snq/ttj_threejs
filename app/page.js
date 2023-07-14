@@ -16,7 +16,6 @@ export default function Home() {
       flexDirection: 'column',
     }}>
      <Navigation /> 
-     <TerminalModal /> 
       <Canvas style={{height: '100vh'}}>
         <pointLight position={[10, 10, 10]} />
         <Suspense fallback={<SpinnerWrapper />}>
