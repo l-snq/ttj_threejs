@@ -5,6 +5,7 @@ import {
   MenuFoldOutlined,
   PieChartOutlined,
 } from '@ant-design/icons';
+import Link from 'next/link';
 import {Button, menu} from 'antd'
 
 export const Navigation = () => {
@@ -12,10 +13,10 @@ export const Navigation = () => {
       <>
 	<div style={{display: 'flex', justifycontent: 'center', flexdirection: 'row'}}>
 	  <ul style={{liststyletype: 'none'}}>
-	    <li>home</li>
-	    <li>about</li>
-	    <li>contact me</li>
-	    <li>my work</li>
+	    <li><Link href="/">home</Link></li>
+	    <li> <Link href="/about">about</Link></li>
+	    <li> <Link href="/contact"> contact me </Link></li>
+	    <li> <Link href="/mywork"> my work </Link> </li>
 	  </ul>
 	</div>
       </>
