@@ -1,32 +1,26 @@
-'use client';
-import React, { Suspense, useEffect, useRef, useReducer } from 'react'
-import { Canvas, useLoader, useFrame } from '@react-three/fiber'
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-
-
-function Load() {
-  const [flag, toggle] = useReducer((state) => !state, true)
-  useEffect(() => {
-    const interval = setInterval(toggle, 1000)
-    return () => clearInterval(interval)
-  }, [])
-
-  const ref = useRef()
-    useFrame((state, delta) => (ref.current.rotation.y += delta))
-  const { scene } = useLoader(GLTFLoader, flag ? './character.glb' : './character.glb') 
-  return <primitive ref={ref} object={scene}>
-    </primitive>
-}
+'use client'
+import React, { Suspense } from 'react'
+import { Canvas } from '@react-three/fiber'
+import CustomSearch from './components/search'
+import LoadModel from './LoadModel' 
+import { SpinnerWrapper } from './components/Spinner'
+import { Navigation } from './components/Navigation'
+import { TerminalModal } from './components/TerminalModal'
 
 export default function Home() {
 
   return (
-    <main>
+    <main 
+    style={{
+      display: 'flex',
+      flexDirection: 'column',
+    }}>
       <Canvas style={{height: '100vh'}}>
         <pointLight position={[10, 10, 10]} />
-        <Suspense fallback={null}>
-          <Load />
-        </Suspense>
+        <Suspense fallback={<SpinnerWrapper />}>
+            <LoadModel />
+            <Navigation style={{paddingLeft: 10}}/> 
+          </Suspense>
         <ambientLight />
       </Canvas>
     </main>
