@@ -15,11 +15,11 @@ export default function Home() {
       display: 'flex',
       flexDirection: 'column',
     }}>
-     <Navigation /> 
       <Canvas style={{height: '100vh'}}>
         <pointLight position={[10, 10, 10]} />
         <Suspense fallback={<SpinnerWrapper />}>
             <LoadModel />
+            <Navigation style={{paddingLeft: 10}}/> 
           </Suspense>
         <ambientLight />
       </Canvas>

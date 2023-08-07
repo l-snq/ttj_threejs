@@ -6,7 +6,8 @@ import {
   PieChartOutlined,
 } from '@ant-design/icons';
 import Link from 'next/link';
-import {Button, Menu} from 'antd'
+import {Button, Menu, ConfigProvider, theme} from 'antd'
+import { Html } from '@react-three/drei';
 
 export const Navigation = () => {
     function getItem(label, key, icon, children, type) {
@@ -21,18 +22,24 @@ export const Navigation = () => {
 
     const items = [
       getItem("Options", "option1", null, [
-	getItem(<li><Link href="/">home</Link></li>, "0"),
-	getItem(<li><Link href="/about">about</Link></li>, "1"),
-	getItem(<li><Link href="/contact">contact</Link></li>, "2"),
-	getItem(<li><Link href="/mywork">mywork</Link></li>, "3"),
+	getItem(<li style={{listStyleType: "none"}}><Link href="/">Home</Link></li>, "0"),
+	getItem(<li style={{listStyleType: "none"}}><Link href="/about">About</Link></li>, "1"),
+	getItem(<li style={{listStyleType: "none"}}><Link href="/contact">Contact</Link></li>, "2"),
+	getItem(<li style={{listStyleType: "none"}}><Link href="/mywork">My Work</Link></li>, "3"),
       ])
     ]
+
     const onClick = (e) => {
       console.log("click", e);
     }
+
     return (
-      <>
-	<div>
+      <Html
+      center
+      style={{marginLeft: -288}}>
+	<ConfigProvider
+	  theme={{algorithm: theme.darkAlgorithm}}
+	>
 	  <Menu
 	    onClick={onClick}
 	    style={{width: 256,}}
@@ -43,7 +50,7 @@ export const Navigation = () => {
 	    mode="inline"
 	    items={items}
 	  />
-	</div>
-      </>
+	</ConfigProvider>
+      </Html>
     )
 }
