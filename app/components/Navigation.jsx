@@ -32,14 +32,7 @@ export const Navigation = () => {
     }
     return (
       <>
-	<div style={{display: 'flex', justifycontent: 'center', flexdirection: 'row'}}>
-	  <ul style={{liststyletype: 'none', flexDirection: 'row'}}>
-	    <li><Link href="/">home</Link></li>
-	    <li><Link href="/about">about</Link></li>
-	    <li><Link href="/contact"> contact me </Link></li>
-	    <li><Link href="/mywork"> my work </Link> </li>
-	  </ul>
-
+	<div>
 	  <Menu
 	    onClick={onClick}
 	    style={{width: 256,}}
