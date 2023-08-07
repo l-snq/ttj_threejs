@@ -6,7 +6,7 @@ import {
   PieChartOutlined,
 } from '@ant-design/icons';
 import Link from 'next/link';
-import {Button, Menu} from 'antd'
+import {Button, Menu, ConfigProvider, theme} from 'antd'
 
 export const Navigation = () => {
     function getItem(label, key, icon, children, type) {
@@ -21,10 +21,10 @@ export const Navigation = () => {
 
     const items = [
       getItem("Options", "option1", null, [
-	getItem(<li><Link href="/">home</Link></li>, "0"),
-	getItem(<li><Link href="/about">about</Link></li>, "1"),
-	getItem(<li><Link href="/contact">contact</Link></li>, "2"),
-	getItem(<li><Link href="/mywork">mywork</Link></li>, "3"),
+	getItem(<li style={{listStyle: "none"}}><Link href="/">home</Link></li>, "0"),
+	getItem(<li style={{listStyle: "none"}}><Link href="/about">about</Link></li>, "1"),
+	getItem(<li style={{listStyle: "none"}}><Link href="/contact">contact</Link></li>, "2"),
+	getItem(<li style={{listStyle: "none"}}><Link href="/mywork">mywork</Link></li>, "3"),
       ])
     ]
     const onClick = (e) => {
@@ -32,14 +32,12 @@ export const Navigation = () => {
     }
     return (
       <>
-	<div style={{display: 'flex', justifycontent: 'center', flexdirection: 'row'}}>
-	  <ul style={{liststyletype: 'none', flexDirection: 'row'}}>
-	    <li><Link href="/">home</Link></li>
-	    <li><Link href="/about">about</Link></li>
-	    <li><Link href="/contact"> contact me </Link></li>
-	    <li><Link href="/mywork"> my work </Link> </li>
-	  </ul>
-
+	<ConfigProvider
+	 theme={{
+	   algorithm: theme.darkAlgorithm,
+	 }} 
+	> 
+	<div>
 	  <Menu
 	    onClick={onClick}
 	    style={{width: 256,}}
@@ -51,6 +49,7 @@ export const Navigation = () => {
 	    items={items}
 	  />
 	</div>
+	</ConfigProvider>
       </>
     )
 }

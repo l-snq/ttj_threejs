@@ -13,7 +13,7 @@ export default function Home() {
     <main 
     style={{
       display: 'flex',
-      flexDirection: 'column',
+      flexDirection: 'row',
     }}>
      <Navigation /> 
       <Canvas style={{height: '100vh'}}>
