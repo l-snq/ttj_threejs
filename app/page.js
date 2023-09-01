@@ -5,7 +5,6 @@ import CustomSearch from './components/search'
 import LoadModel from './LoadModel' 
 import { SpinnerWrapper } from './components/Spinner'
 import { Navigation } from './components/Navigation'
-import { TerminalModal } from './components/TerminalModal'
 
 export default function Home() {
 
