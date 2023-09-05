@@ -34,9 +34,6 @@ export const Navigation = () => {
     }
 
     return (
-      <Html
-      center
-      style={{marginLeft: -288}}>
 	<ConfigProvider
 	  theme={{algorithm: theme.darkAlgorithm}}
 	>
@@ -51,6 +48,5 @@ export const Navigation = () => {
 	    items={items}
 	  />
 	</ConfigProvider>
-      </Html>
     )
 }

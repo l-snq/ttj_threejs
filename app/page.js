@@ -5,6 +5,7 @@ import CustomSearch from './components/search'
 import LoadModel from './LoadModel' 
 import { SpinnerWrapper } from './components/Spinner'
 import { Navigation } from './components/Navigation'
+import { Html } from '@react-three/drei';
 
 export default function Home() {
 
@@ -17,8 +18,12 @@ export default function Home() {
       <Canvas style={{height: '100vh'}}>
         <pointLight position={[10, 10, 10]} />
         <Suspense fallback={<SpinnerWrapper />}>
-            <LoadModel />
+          <LoadModel />
+          <Html 
+          center
+          style={{marginLeft: -288}}>
             <Navigation style={{paddingLeft: 10}}/> 
+          </Html>
           </Suspense>
         <ambientLight />
       </Canvas>
